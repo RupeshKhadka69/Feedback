@@ -1,0 +1,99 @@
+*,::after,::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: monospace;
+    
+    background-color: lightcyan;
+}
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.content {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    width: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+}
+.m1 {margin-top: 1rem;}
+.m2 {margin-top: 2rem;}
+.m3 {margin-top: 3rem;}
+.m4 {margin-top: 4rem;}
+.m5 {margin-top: 5rem;}
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 2rem;
+}
+.green {
+    color: rgb(22, 155, 22);
+}
+.sad {
+    color: rgb(155, 108, 22);
+}
+.red {
+    color: rgb(197, 25, 16);
+}
+.images img {width: 40px;}
+.image{
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 5px 15px;
+}
+.image:hover,.image.active {
+    color: rgb(44, 181, 76);
+    border-radius: 10px;
+    box-shadow: 0px  0 10px rgba(0, 0, 0, .3) ;
+    background-color: rgba(170, 170, 169, 0.773);
+}
+small {
+    font-size: 16px;
+    padding-block: 5px ;
+}
+.button button {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: rgb(11, 207, 47);
+    border-radius: 5px;
+    border: 0;
+}
+.button button:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    transition: all .3s ease;
+}
+button:active {
+    transform: scale(1.2);
+}
+@media screen  and ( max-width: 700px) {
+    .content {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding-inline: 0;
+    }
+    .images {
+        gap: 1rem;
+    }
+    .container {
+        min-height: 100vh;
+        padding-inline: 1rem;
+        text-align: center;
+        display: grid;
+        place-items: center;
+    }
+    
+    
+}
